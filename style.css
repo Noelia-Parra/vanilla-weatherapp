@@ -4,9 +4,9 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.bgimage {
+#bgimage {
   width: 100%;
-  background-image: url(../weather-app/src/sunny.png);
+  background-image: url(../vanilla-weatherapp/src/sunny.png);
   background-position-x: center;
   background-position-y: baseline;
   background-size: cover;
@@ -36,7 +36,7 @@ body {
 .form-control {
   width: 200px;
   border: none;
-  background-color: #d2e603;
+  background-color: #f5f8c3;
   border-radius: 20px;
 }
 #city-input::placeholder {
@@ -52,10 +52,10 @@ body {
   border-radius: 20px;
 }
 
-.city {
+#city {
   font-size: 32px;
 }
-.pic {
+#pic {
   font-size: 32px;
 }
 li {
@@ -66,10 +66,60 @@ li {
   font-weight: 100;
   line-height: 18px;
 }
-.temp {
-  font-size: 32px;
+li:first-letter {
+  text-transform: capitalize;
+}
+#temp {
+  font-size: 40px;
 }
 
-.degrees {
+#degrees {
   font-size: 15px;
+}
+
+.weather-temperature .degrees {
+  position: relative;
+  font-size: 16px;
+  top: -34px;
+}
+
+.weather-temperature .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-temperature .active:hover {
+  text-decoration: none;
+}
+
+.weather-forecast {
+  margin-top: 10px;
+}
+
+.weather-forecast h5 {
+  color: rgb(36, 35, 35);
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
+
+.weather-forecast img {
+  display: block;
+  margin-top: -20px;
+  margin: 0 auto;
+  height: 60px;
+  width: 60px;
+}
+
+.weather-forecast-temperature {
+  text-align: center;
+  color: rgb(36, 35, 35);
+  font-size: 13px;
+  font-weight: 400;
+  height: auto;
+  line-height: 15px;
+  white-space: nowrap;
 }
