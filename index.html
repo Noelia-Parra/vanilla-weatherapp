@@ -9,57 +9,67 @@
       integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
     <title>Weather today</title>
   </head>
   <body>
     <div class="container">
+      <div class="weather-app-wrapper">
       <div class="row">
         
         
         <div class="col-5">
+          <form id="search-form" class="mb-3">
             <div class="row">
-               
+          
             <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off"  />
         
    
-            <input type="submit" value="🔍" class="btn btn-primary" />
+            <input type="submit" value="🔍" class="btn btn-primary"/>
        
             </div>
-         <p class="city">Madrid</p>
+          </form>
+         <p id="city"></p>
+          <div class="clearfix weather-temperature">
           
-          <p class="pic">🌞</p>
-          <br />
+           <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon" class="float-left">
+         
+          
+            <div class="float-left">
+            <strong id="temp"></strong> <span id="degrees"><a href="#" id="cels" class="active">ºC</a> | <a href="#" id="far">ºF</a></span>
+          </div>
+          </div>
+
           <ul>
-          <li class="temp">23 <span class="degrees"><a href="#" class="cels">ºC</a> | <a href="#" class="far">ºF</a></span></li>
-          
-          <li class="explain">Sunny</li>
+          <li id="explain"></li>
         <br>
-          <li class="humi">Humidity: <span class="humidity">48</Humidity:span>%</li>
+          <li id="humi">Humidity: <span id="humidity"></span>%</li>
           
-          <li class="wind">Wind: <span class="windy">10</span>km/h</li>
+          <li id="wind">Wind: <span id="windy"></span> km/h</li>
         <br>
-          <li class="update">Last update</li>
-          <li class="hour">23:00</li>
+          <li id="update">Last update</li>
+          <li id="hour"></li>
         </ul>
         </div>
-        <div class="col-7 bgimage">
-          Next hours
-          <br />🌞
-          <br />
-          🌞
-          <br />
-          🌞
-          <br />
-          🌞
-          <br />
-          🌞
+        <div class="col-7 weather-forecast" id="forecast">
+          <h3>Next hours</h3>
+          
+
+          <div class="weather-forecast-temperature"></div>
+          
           
            <!-- <img src="src/sunny.png" alt="sunny" class="rounded float-right" width="300"> -->
-          
+          </div>
         </div>
       </div>
+      <small>
+        <a href="https://github.com/Noelia-Parra/vanilla-weatherapp" target="_blank">Open-source code</a>
+        by Noelia Parra
+      </small>
+    </div>
     </div>
     </div>
   </body>
