@@ -15,64 +15,56 @@
 
     <title>Weather today</title>
   </head>
-  <body>
-    <div class="container">
-      <div class="weather-app-wrapper">
-      <div class="row">
-        
-        
-        <div class="col-5">
-          <form id="search-form" class="mb-3">
-            <div class="row">
+    <body>
+      <div class="container">
+        <div class="weather-app-wrapper">
+                <div class="form">
+                 <form id="search-form">
+                    <div class="row" id="form">
+                      <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off"  />
+                      <input type="submit" value="🔍" class="btn btn-primary"/>
+                    </div>
+                  </form>
+                </div>
           
-            <input type="search" placeholder="Type a city.." class="form-control" id="city-input" autocomplete="off"  />
-        
-   
-            <input type="submit" value="🔍" class="btn btn-primary"/>
+        <div class="row" id="principal">
+
+         <div class="col-6">
+            <p id="city"></p>
+            <div class="clearfix weather-temperature">
+              <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon" class="float-left">
+                <div class="float-left">
+                  <strong id="temp"></strong> <span id="degrees"><a href="#" id="cels" class="active">ºC</a> | <a href="#" id="far">ºF</a></span>
+                  <p id="explain"></p>
+                </div>  
+            </div>         
+          </div>
+          <div class="col-6">     
+            <ul>
+              <br>
+              <br>
+              <br>
+              <br>
+              <li id="humi">Humidity: <span id="humidity"></span>%</li>
+              <li id="wind">Wind: <span id="windy"></span> km/h</li>
+              <br>
+              <li id="update">Last update</li>
+              <li id="hour"></li>
+            </ul>
+          </div>
+        </div>
        
-            </div>
-          </form>
-         <p id="city"></p>
-          <div class="clearfix weather-temperature">
-          
-           <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear" id="icon" class="float-left">
-         
-          
-            <div class="float-left">
-            <strong id="temp"></strong> <span id="degrees"><a href="#" id="cels" class="active">ºC</a> | <a href="#" id="far">ºF</a></span>
-          </div>
-          </div>
-
-          <ul>
-          <li id="explain"></li>
-        <br>
-          <li id="humi">Humidity: <span id="humidity"></span>%</li>
-          
-          <li id="wind">Wind: <span id="windy"></span> km/h</li>
-        <br>
-          <li id="update">Last update</li>
-          <li id="hour"></li>
-        </ul>
-        </div>
-        <div class="col-7 weather-forecast" id="forecast">
-          <h3>Next hours</h3>
-          
-
-          <div class="weather-forecast-temperature"></div>
-          
-          
-           <!-- <img src="src/sunny.png" alt="sunny" class="rounded float-right" width="300"> -->
-          </div>
-        </div>
+        <div class="row weather-forecast" id="forecast"></div>
+      
       </div>
-       </div>
       <small>
         <a href="https://github.com/Noelia-Parra/vanilla-weatherapp" target="_blank">Open-source code</a>
-        by Noelia Parra
-      </small>
-    </div>
-   
-    </div>
+         by Noelia Parra
+      </small>   
+      </div>
+
+  </div>
   </body>
   <script src="script.js"> </script>
 </html>
+<!-- <img src="src/sunny.png" alt="sunny" class="rounded float-right" width="300"> -->
