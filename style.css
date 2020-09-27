@@ -30,7 +30,7 @@ body {
   border-radius: 18px;
 }
 #form {
-  padding-left: 20px;
+  padding-left: 16px;
 }
 #city-input::placeholder {
   color: #888888;
